@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <link rel="stylesheet" href="css/register-style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <title>Register for School</title>
+</head>
+
+<body>
+    
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">
+        <h2 href="index.html">SMART SCHOOL SEARCH</h2>
+      </a>
+      <div class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#Services">Our Services</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Registration Form -->
+    <div class="form-container">
+        <h2>Register for School</h2>
+    
+        <div class="input-container">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" class="input-field" placeholder="Enter your first name">
+        </div>
+    
+        <div class="input-container">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" class="input-field" placeholder="Enter your last name">
+        </div>
+    
+        <div class="input-container">
+          <label for="age">Age</label>
+          <input type="text" id="age" class="input-field" placeholder="Enter your age">
+        </div>
+    
+        <div class="input-container">
+          <label for="previousGrade">Previous Grade</label>
+          <input type="text" id="previousGrade" class="input-field" placeholder="Enter your previous grade">
+        </div>
+    
+        <div class="input-container">
+          <label for="previousScore">Previous Score (Last Semester)</label>
+          <input type="text" id="previousScore" class="input-field" placeholder="Enter your previous score">
+        </div>
+    
+        <div class="input-container">
+          <label for="curriculumFollowed">Curriculum Followed</label>
+          <input type="text" id="curriculumFollowed" class="input-field" placeholder="Enter the curriculum you followed">
+        </div>
+    
+        <div class="input-container">
+          <label for="previousCountry">Previous Country</label>
+          <input type="text" id="previousCountry" class="input-field" placeholder="Enter your previous country">
+        </div>
+    
+        <div class="input-container">
+          <label for="address">Address</label>
+          <input type="text" id="address" class="input-field" placeholder="Enter your address">
+        </div>
+    
+        <div class="input-container">
+          <label for="phoneNumber">Phone Number</label>
+          <input type="text" id="phoneNumber" class="input-field" placeholder="Enter your phone number">
+        </div>
+    
+        <div class="input-container">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="input-field" placeholder="Enter your email">
+        </div>
+    
+        <div class="input-container">
+          <label for="semesterToJoin">Semester to Join</label>
+          <input type="date" id="semesterToJoin" class="input-field">
+        </div>
+    
+        <div class="button-container">
+            <button class="reset-button" onclick="resetForm()">Reset</button>
+            <button class="submit-button" onclick="submitForm()">Submit</button>
+        </div>
+      
+        <div id="success-message" class="success-message"></div>
+      </div>
+
+      <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3>SMART SCHOOL SEARCH</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque atque aliquam libero reprehenderit...</p>
+          </div>
+          <div class="footer-column">
+            <h3>Subscribe to Newsletter</h3>
+            <div class="newsletter-form">
+              <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+              <button type="button" onclick="subscribeNewsletter()">Subscribe</button>
+              <div id="newsletterSuccessMessage" style="display: none;">
+                <p>Thank you for subscribing to our newsletter!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Add this script tag at the end of the body section -->
+<script src="js/register-form.js"></script>
+
+
+</body>
+
+</html>

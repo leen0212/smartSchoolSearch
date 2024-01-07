@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <link rel="stylesheet" href="css/search-style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <title>Search and Filter Schools</title>
+</head>
+
+<body>
+    
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">
+        <h2 href="index.html">SMART SCHOOL SEARCH</h2>
+      </a>
+      <div class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#Services">Our Services</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-box">
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Search For School"
+            autocomplete="off">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="result-box">
+        
+        </div>
+    </div>
+
+    <!-- Registration Button -->
+    <div class="registration-button">
+        <h2>Would you like to register in a school?</h2>
+        <button class="register-button">Register In A School</button>
+    </div>
+
+    <!-- Input Filter Feild -->
+    <div class="form-container">
+        <h2>Search and Filter Schools</h2>
+    
+        <div class="input-container">
+          <label for="city">City</label>
+          <select id="city" class="input-field">
+            <!-- Add options for cities in Jordan -->
+            <option value="amman">Amman</option>
+            <option value="irbid">Irbid</option>
+            <!-- Add more cities as needed -->
+          </select>
+        </div>
+    
+        <div class="input-container">
+          <label for="neighborhood">Neighborhood</label>
+          <input type="text" id="neighborhood" class="input-field" placeholder="Insert the Neighborhood">
+        </div>
+    
+        <div class="checkbox-container">
+          <input type="checkbox" id="public" class="checkbox">
+          <label for="public" class="checkbox-label">Public School</label>
+    
+          <input type="checkbox" id="private" class="checkbox">
+          <label for="private" class="checkbox-label">Private School</label>
+        </div>
+    
+        <div class="input-container">
+          <label for="budget">Budget (Min and Max)</label>
+          <input type="text" id="budget" class="input-field" placeholder="Min Budget">
+          <input type="text" id="budget" class="input-field" placeholder="Max Budget">
+        </div>
+    
+        <div class="input-container">
+          <label for="curriculum">Curriculum</label>
+          <select id="curriculum" class="input-field">
+            <!-- Add options for school curriculums -->
+            <option value="curriculum1">Curriculum 1</option>
+            <option value="curriculum2">Curriculum 2</option>
+            <!-- Add more curriculums as needed -->
+          </select>
+        </div>
+    
+        <div class="radio-container">
+          <input type="radio" id="bus-yes" name="bus-service" class="radio">
+          <label for="bus-yes" class="radio-label">Yes, Buss Service</label>
+    
+          <input type="radio" id="bus-no" name="bus-service" class="radio">
+          <label for="bus-no" class="radio-label">No Buss Service</label>
+        </div>
+    
+        <div class="input-container">
+          <label for="grades">Grades</label>
+          <select id="grades" class="input-field">
+            <!-- Add options for grades -->
+            <option value="grade1">Grade 1</option>
+            <option value="grade2">Grade 2</option>
+            <!-- Add more grades as needed -->
+          </select>
+        </div>
+    
+        <div class="button-container">
+            <button class="reset-button" onclick="resetForm()">Reset</button>
+            <button class="done-button" onclick="checkForm()">Done</button>
+          </div>
+      
+          <div id="success-message" class="success-message"></div>
+      </div>
+
+      <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3>SMART SCHOOL SEARCH</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque atque aliquam libero reprehenderit...</p>
+          </div>
+          <div class="footer-column">
+            <h3>Subscribe to Newsletter</h3>
+            <div class="newsletter-form">
+              <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+              <button type="button" onclick="subscribeNewsletter()">Subscribe</button>
+              <div id="newsletterSuccessMessage" style="display: none;">
+                <p>Thank you for subscribing to our newsletter!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        // Add an event listener to the "Register In A School" button
+        var registerButton = document.querySelector('.register-button');
+        registerButton.addEventListener('click', function () {
+        // Redirect to the register-student.html page
+         window.location.href = 'register-student.html';
+            });
+        });
+      </script>
+
+    <script src="js/autocomplete.js">
+
+    </script>
+
+</body>
+
+</html>

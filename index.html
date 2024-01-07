@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <title>Smart School Search</title>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">
+      <h2 href="index.html">SMART SCHOOL SEARCH</h2>
+    </a>
+    <div class="navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#Services">Our Services</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <!-- Home -->
+    <section id="home">
+      <img class="logo-size" src="images/Logo3-2.png" alt="">
+      <h2>YOUR #1 SCHOOL FINDER</h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, distinctio? Sunt reiciendis voluptatibus modi explicabo dignissimos ratione eligendi eaque aspernatur quo nam. Error enim in iste dolorem aliquid voluptate quibusdam.</p>
+      <br>
+      <p class="youare">YOU ARE A ــــــــــــــ ?</p>
+      <div class="btn">
+        <a class="blue" href="search-form.html">Student</a>
+        <a class="yellow" href="login-school.html">School</a>
+      </div>
+    </section>
+
+    <!-- About us -->
+    <section id="about">
+      <h1>About Us</h1>
+      <p>We are a team of bachelor students at Jordanian University. We work on projects that aim to help people all around the world, <br> get access to our country’s services much easier and faster. We also aim to improve the quality of these services.</p>
+    </section>
+
+
+    <!-- Counter Up Section -->
+<section id="counterUp">
+  <div class="counter-container">
+    <div class="counter-column">
+      <h2>Number of Registered Schools</h2>
+      <div class="counting-number" id="schoolCounter">0</div>
+    </div>
+    <div class="counter-column">
+      <h2>Number of Students Registered in a School</h2>
+      <div class="counting-number" id="studentCounter">0</div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Our Services -->
+    <section id="Services">
+      <h1>Our Services</h1>
+      <p>This website was designed to help students find the perfect school through a very easy yet efficient process. <br> Also, it helps schools to reach more students.</p>
+      <div class="services-cards">
+        <div class="serv-box">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3>Service 1</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga nulla, iure consequatur incidunt illum, magni iste officia earum autem cum numquam dicta nisi distinctio culpa expedita accusamus eum. Repellendus.</p>
+        </div>
+        <div class="serv-box">
+          <i class="fa-solid fa-globe"></i>
+          <h3>Service 2</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga nulla, iure consequatur incidunt illum, magni iste officia earum autem cum numquam dicta nisi distinctio culpa expedita accusamus eum. Repellendus.</p>
+        </div>
+        <div class="serv-box">
+          <i class="fa-solid fa-school"></i>
+          <h3>Service 3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga nulla, iure consequatur incidunt illum, magni iste officia earum autem cum numquam dicta nisi distinctio culpa expedita accusamus eum. Repellendus.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact">
+    <h1>Contact Us</h1>
+    <p>Feel free to reach out to us. We'd love to hear from you!</p>
+    <div class="contact-form">
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="button" onclick="submitForm()">Send</button>
+      </form>
+
+      <div id="successMessage" style="display: none;">
+        <p>Thank you for contacting us! We will get back to you soon.</p>
+      </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>SMART SCHOOL SEARCH</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque atque aliquam libero reprehenderit...</p>
+        </div>
+        <div class="footer-column">
+          <h3>Subscribe to Newsletter</h3>
+          <div class="newsletter-form">
+            <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+            <button type="button" onclick="subscribeNewsletter()">Subscribe</button>
+            <div id="newsletterSuccessMessage" style="display: none;">
+              <p>Thank you for subscribing to our newsletter!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script>
+      function submitForm() {
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+      }
+
+      function subscribeNewsletter() {
+        document.getElementById('newsletterSuccessMessage').style.display = 'block';
+      }
+
+      // Function to count up to the final number with a specified duration
+      function countUpTo(targetElementId, targetCount, duration) {
+          let counter = 0;
+          const element = document.getElementById(targetElementId);
+          const startTime = performance.now();
+          
+          function updateCounter(timestamp) {
+            const progress = (timestamp - startTime) / duration;
+            counter = Math.min(progress * targetCount, targetCount);
+            element.textContent = counter.toLocaleString(); // Use localeString for comma separation
+
+            if (counter < targetCount) {
+              requestAnimationFrame(updateCounter);
+            }
+          }
+
+          requestAnimationFrame(updateCounter);
+        }
+
+        // Count up the numbers on page load
+        document.addEventListener('DOMContentLoaded', function () {
+          countUpTo('schoolCounter', 500, 2000); // 2 seconds
+          countUpTo('studentCounter', 350000, 2000); // 2 seconds
+        });
+    </script>
+</body>
+
+</html>
