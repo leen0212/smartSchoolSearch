@@ -108,7 +108,7 @@ button .fa-solid{
 }
 
  /* Additional styles for the custom search form */
- .form-container {
+.form-container {
   width: 600px;
   margin: 20px auto;
   background: #fff;
@@ -117,8 +117,8 @@ button .fa-solid{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-container input {
-  color: #333;
+.form-container input{
+    color: #333;
 }
 
 .form-container h2 {
@@ -147,7 +147,7 @@ button .fa-solid{
 }
 
 .budget-slider-container {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .checkbox-container,
@@ -163,6 +163,7 @@ button .fa-solid{
   color: #333;
 }
 
+
 .success-message {
   color: green;
   text-align: center;
@@ -175,9 +176,8 @@ button .fa-solid{
   align-items: center;
   margin-top: 20px;
 }
-
 .reset-button,
-.submit-button {
+.done-button {
   background-color: #007BFF;
   color: #fff;
   border: 0;
@@ -187,16 +187,13 @@ button .fa-solid{
   cursor: pointer;
   margin-left: 10px;
 }
-
-.submit-button {
-  background-color: #28a745; /* Unique color for the Submit button */
+.done-button {
+  background-color: #28a745; /* Unique color for the Done button */
 }
-
 .reset-button:hover,
-.submit-button:hover {
+.done-button:hover {
   background-color: #0056b3;
 }
-
 .error-message {
   color: red;
   margin-top: 5px;
